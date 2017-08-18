@@ -1,3 +1,17 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message img{
+  border: 2px solid #fff;
+  float: left;
+  height: 250px;
+  width: 250px;
+  margin: 10px;
+}
+
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}

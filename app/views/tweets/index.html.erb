@@ -1,1 +1,61 @@
-test
+<header>
+  <div class="posting_form top_content">
+    <header class="posting_header">
+      <div class="posting_user_info user_info">
+        <%= current_user.nickname %>
+      </div>
+    </header>
+
+  <%= form_for @tweet do |f| %>
+      <%= f.text_field :text, placeholder: "今日のお酒はどうだった？\n\n\n" %><br />
+      <%= f.label :"お店:" %><%= f.text_field :shop, placeholder: "どこで飲んだの？" %><br />
+      <%= f.label :"店舗url:" %><%=f.text_field:shop_url, placeholder: "http://" %><br /><br />
+      <%= f.submit "投稿する" %>
+
+    <% end %>
+  </div>
+
+
+    <div class="contents">
+      <% @tweets.each do |tweet| %>
+<!--        <form class="clearfix">
+        <img src="images/cat1.png">
+        <textarea rows="4" cols="40"></textarea>
+        <div class="button-box">
+          <input type="submit">
+        </div>
+      </form> -->
+      <div class="message clearfix">
+        <%= image_tag 'sakepic1.jpg' %>
+        <!-- <img src="images/cat1.png"> -->
+        <div class="message_box">
+          <p class="user_name">
+            <%= tweet.user.nickname %>
+            <!-- <span class="time">・8月13日</span> -->
+          </p>
+          <p class="text">
+           <%= tweet.text %>
+          </p>
+        </div>
+        <footer>
+         <time><%= time_ago_in_words tweet.created_at %></time></footer>
+    </div>
+        <% end %>
+      </div>
+      <div class="message clearfix">
+       <%= image_tag 'sakepic1.jpg' %>
+ <!--         <img src="images/cat1.png"> -->
+        <div class="message_box">
+          <p class="user_name">たま
+            <!-- <span class="time">・8月13日</span> -->
+          <p>
+          <p class="text">
+            家宝は寝て待てにゃー。急がば回れにゃー。蓼食う虫も好き好きにゃー。一念岩をも通すにゃー。千石取れば万石羨むにゃー。
+          <p>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
