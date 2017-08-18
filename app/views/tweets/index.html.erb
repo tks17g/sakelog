@@ -9,7 +9,8 @@
   <%= form_for @tweet do |f| %>
       <%= f.text_field :text, placeholder: "今日のお酒はどうだった？\n\n\n" %><br />
       <%= f.label :"お店:" %><%= f.text_field :shop, placeholder: "どこで飲んだの？" %><br />
-      <%= f.label :"店舗url:" %><%=f.text_field:shop_url, placeholder: "http://" %><br /><br />
+      <%= f.label :"店舗url:" %><%=f.text_field:shop_url, placeholder: "http://" %><br />
+      <%= f.file_field :img %><br />
       <%= f.submit "投稿する" %>
 
     <% end %>
@@ -26,7 +27,7 @@
         </div>
       </form> -->
       <div class="message clearfix">
-        <%= image_tag 'sakepic1.jpg' %>
+        <%= image_tag tweet.img.url %>
         <!-- <img src="images/cat1.png"> -->
         <div class="message_box">
           <p class="text">

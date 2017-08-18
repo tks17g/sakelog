@@ -54,6 +54,7 @@ gem 'therubyracer', '0.12.1'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-material-design', '0.1.4'
 gem 'figaro'
+gem 'carrierwave'
 
 group :production do
   gem 'rails_12factor'
