@@ -52,3 +52,4 @@ production:
   database: sakelog_production
   username: sakelog
   password: <%= ENV['SAKELOG_DATABASE_PASSWORD'] %>
+  socket: /tmp/mysql.sock
