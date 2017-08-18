@@ -10,6 +10,27 @@
   margin: 10px;
 }
 
+.message{
+
+ div{
+  min-height: 250px;
+  position: relative;
+  right:0px;
+
+  .text{
+    padding: 20px 0 0 0;
+    }
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  right:0px;
+  text-align: right;
+    }
+  }
+}
+
+
 .clearfix:after{
   display: block;
   content: "";

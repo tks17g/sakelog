@@ -2,7 +2,7 @@
   <div class="posting_form top_content">
     <header class="posting_header">
       <div class="posting_user_info user_info">
-        <%= current_user.nickname %>
+        <%= current_user.nickname %>が飲んだ旨い酒
       </div>
     </header>
 
@@ -29,19 +29,19 @@
         <%= image_tag 'sakepic1.jpg' %>
         <!-- <img src="images/cat1.png"> -->
         <div class="message_box">
-          <p class="user_name">
-            <%= tweet.user.nickname %>
-            <!-- <span class="time">・8月13日</span> -->
-          </p>
           <p class="text">
            <%= tweet.text %>
           </p>
-        </div>
         <footer>
-         <time><%= time_ago_in_words tweet.created_at %></time></footer>
-    </div>
-        <% end %>
+          <p class="user_name">
+            posted by <%= tweet.user.nickname %> |
+            <!-- <span class="time">・8月13日</span> -->
+           <time><%= time_ago_in_words tweet.created_at %></time> | 編集 | 削除</p>
+        </footer>
+        </div>
+         <% end %>
       </div>
+    </div>
       <div class="message clearfix">
        <%= image_tag 'sakepic1.jpg' %>
  <!--         <img src="images/cat1.png"> -->
