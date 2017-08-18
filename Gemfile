@@ -53,3 +53,8 @@ gem 'libv8', '3.16.14.7'
 gem 'therubyracer', '0.12.1'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-material-design', '0.1.4'
+gem 'figaro'
+
+group :production do
+  gem 'rails_12factor'
+end
