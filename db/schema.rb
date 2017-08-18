@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817164039) do
+ActiveRecord::Schema.define(version: 20170818081134) do
 
   create_table "tweets", force: :cascade do |t|
     t.text     "tweet",      limit: 65535
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170817164039) do
     t.string   "unconfirmed_email",      limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+    t.string   "nickname",               limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
