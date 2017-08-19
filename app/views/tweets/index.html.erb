@@ -2,20 +2,24 @@
   <div class="posting_form top_content">
     <header class="posting_header">
       <div class="posting_user_info user_info">
-        <%= current_user.nickname %>が飲んだ旨い酒
+      <%= current_user.nickname %>が飲んだ旨い酒について書こう！(コメントと写真は必須)<br />
       </div>
-    </header>
+    </header><br />
 
   <%= form_for @tweet do |f| %>
-      <%= f.text_field :text, placeholder: "今日のお酒はどうだった？\n\n\n" %><br />
+      <%= f.label :"コメント:" %><br />
+      <%= f.text_area :text, placeholder: "今日のお酒はどうだった？\n\n\n" %><br />
 
       <%= f.label :"お店:" %><%= f.text_field :shop, placeholder: "どこで飲んだの？" %><br />
       <%= f.label :"店舗url:" %><%=f.text_field:shop_url, placeholder: "http://" %><br /><br />
       <%= f.label :"お酒の写真:" %><%= f.file_field :img %><br />
       <%= f.submit "投稿する" %>
-
-    <% end %>
+      <% if @tweet.errors.any? %>
+      <%= @user.errors.full_message %>
+      <% end %>
+      <% end %>
   </div>
+
 
     <%= render @tweets  %>
     <%= paginate(@tweets) %>
