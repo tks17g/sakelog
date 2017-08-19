@@ -55,6 +55,8 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap-material-design', '0.1.4'
 gem 'figaro'
 gem 'carrierwave'
+gem 'rmagick', require: 'RMagick'
+gem 'fog'
 
 group :production do
   gem 'rails_12factor'
