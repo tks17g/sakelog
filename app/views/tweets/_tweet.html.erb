@@ -1,0 +1,31 @@
+
+<!--        <form class="clearfix">
+        <img src="images/cat1.png">
+        <textarea rows="4" cols="40"></textarea>
+        <div class="button-box">
+          <input type="submit">
+        </div>
+      </form> -->
+
+      <div class="message top_content clearfix">
+        <%= image_tag tweet.img %>
+        <!-- <img src="images/cat1.png"> -->
+        <div class="message_box">
+          <p class="shoplink"><%= link_to "#{tweet.shop}", tweet.shop_url%></p>
+          <p class="text">
+           <%= tweet.text %>
+          </p>
+        <footer class="foot">
+          <p class="user_name">
+            posted by <%= link_to"#{tweet.user.nickname}", user_path(tweet.user_id) %>
+            <br/>
+            <!-- <span class="time">・8月13日</span> -->
+           <time><%= time_ago_in_words tweet.created_at %></time>
+           <% if tweet.user_id == current_user.id %>
+            |
+            <%= link_to'編集', edit_tweet_path(tweet) %> |
+            <%= link_to'削除', tweet_path(tweet),method: :delete %></p>
+            <% end %>
+        </footer>
+        </div>
+        </div>

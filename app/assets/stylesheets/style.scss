@@ -8,7 +8,7 @@ $base: #ec5e5f;
 $base_sub: #f09797;
 $accent: #5ec6ec;
 $text: #3b3730;
-$gray: #888;
+$gray: #aaa;
 
 //setting
 @charset "UTF-8";
@@ -20,7 +20,7 @@ html,body {
   height: 100%;
 }
 body {
-  background-color: #fbf7f1 !important;
+  background-color: #f0f0f0 !important;
   padding-top: 60px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -528,7 +528,7 @@ input[type=submit] {
     padding: 0 10px;
     margin: 0;
     border: 0;
-    background-color: #fbf7f1;
+    background-color: #dcdcdc;
     clear: both;
     position: absolute;
     top: -15px;
@@ -633,7 +633,7 @@ footer {
   }
   .user_info {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 0px;
     time {
       color: $gray;
       font-size: .8em;
@@ -649,6 +649,13 @@ footer {
         width: 80%;
         line-height: 40px;
         margin-top: 5px;
+      }
+      textarea {
+        border: 0;
+        font-size: 1.4em;
+        width: 100%;
+        line-height: 40px;
+        margin-top: 0px;
       }
       input[type="submit"] {
         width: 18%;

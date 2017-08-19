@@ -33,7 +33,7 @@ class ImgUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_fit: [250, 250]
+    process resize_to_fill: [100, 100]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -44,8 +44,8 @@ class ImgUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  def filename
-    "#{Time.zone.now.strftime('%Y%m%d%H%M%S')}.jpg" if original_filename.present?
-  end
+  # def filename
+  #   "#{Time.zone.now.strftime('%Y%m%d%H%M%S')}.jpg" if original_filename.present?
+  # end
 
 end

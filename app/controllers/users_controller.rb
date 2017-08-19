@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @tweet = @user.tweets.order("created_at DESC").page(params[:page]).per(20)
   end
 
   def edit
@@ -12,9 +13,6 @@ class UsersController < ApplicationController
 
   def update
     current_user.update(update_params)
-  end
-
-  def destroy
   end
 
   private
