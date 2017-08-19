@@ -1,0 +1,22 @@
+
+  <div class="posting_form top_content">
+    <header class="posting_header">
+      <div class="posting_user_info user_info">
+      <div class="editform">
+
+  <%= form_for @tweet do |f| %>
+      <%= f.text_field :text %><br />
+
+      <%= f.label :"お店:" %><%= f.text_field :shop %><br />
+      <%= f.label :"店舗url:" %><%=f.text_field:shop_url %><br /><br />
+      <%= f.label :"お酒の写真:" %><br />
+      <%= image_tag @tweet.img.url(:thumb) %><br /><br />
+      <%= f.file_field :img %><br />
+      <%= f.submit "投稿する" %>
+  <% end %>
+
+</div>
+</div>
+</header>
+</div>
+

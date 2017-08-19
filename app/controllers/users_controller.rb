@@ -15,9 +15,6 @@ class UsersController < ApplicationController
     current_user.update(update_params)
   end
 
-  def destroy
-  end
-
   private
   def update_params
       params.require(:user).permit(:nickname)
