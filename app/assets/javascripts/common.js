@@ -14,4 +14,4 @@ $(function($) {
     //.hogeの中にあるdivの高さを全て同じにする
     equalHeight($("section"));
   });
-})(jQuery);
+});
