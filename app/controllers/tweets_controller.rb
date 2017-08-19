@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
 
   def index
-    @tweets = Tweet.order('created_at DESC')
+    @tweets = Tweet.includes(:user).order('created_at DESC')
     @tweet = Tweet.new
   end
 

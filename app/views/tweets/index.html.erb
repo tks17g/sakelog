@@ -37,7 +37,8 @@
           </p>
         <footer>
           <p class="user_name">
-            posted by <%= tweet.user.nickname %> |
+            posted by <%= link_to"#{tweet.user.nickname}", user_path(tweet.user_id) %>
+            <br/>
             <!-- <span class="time">・8月13日</span> -->
            <time><%= time_ago_in_words tweet.created_at %></time> | 編集 | 削除</p>
         </footer>
