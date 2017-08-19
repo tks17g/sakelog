@@ -10,4 +10,5 @@
   </div>
 </div>
 
-<%= render partial: "tweets/tweet", collection: @user.tweets.order("created_at DESC") %>
+<%= render partial: "tweets/tweet", collection: @tweet %>
+<%= paginate(@tweet) %>
